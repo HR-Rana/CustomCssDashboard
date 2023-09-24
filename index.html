@@ -17,22 +17,24 @@
 
     <main class="flex-box">
         <div class="left-sitebar">
-            <div class="logo">
-                <a href="">Creative Team</a>
-            </div>
-            <hr>
-            <div class="nav-items">
-                <ul>
-                    <li> <a href=""><i class="fa-solid fa-sliders"></i>Dashboard</a></li>
-                    <li> <a href=""><i class="fa-solid fa-user-large"></i>User Profile</a></li>
-                    <li> <a href=""><i class="fa-solid fa-table-list"></i>Table List</a></li>
-                    <li><a href=""><i class="fa-solid fa-money-bill-wheat"></i> Billing</a></li>
-                    <li><a href=""><i class="fa-solid fa-bell"></i>Notifications</a></li>
-                    <li><a href=""><i class="fa-solid fa-user-plus"></i>Sign-Up</a></li>
-                    <li><a href=""><i class="fa-solid fa-right-to-bracket"></i>Sign-Out</a></li>
+            <div class="sitebar-menu">
+                <div class="logo">
+                    <a href="">Creative Team</a>
+                </div>
+                <hr>
+                <div class="nav-items">
+                    <ul>
+                        <li> <a href=""><i class="fa-solid fa-sliders"></i>Dashboard</a></li>
+                        <li> <a href=""><i class="fa-solid fa-user-large"></i>User Profile</a></li>
+                        <li> <a href=""><i class="fa-solid fa-table-list"></i>Table List</a></li>
+                        <li><a href=""><i class="fa-solid fa-money-bill-wheat"></i> Billing</a></li>
+                        <li><a href=""><i class="fa-solid fa-bell"></i>Notifications</a></li>
+                        <li><a href=""><i class="fa-solid fa-user-plus"></i>Sign-Up</a></li>
+                        <li><a href=""><i class="fa-solid fa-right-to-bracket"></i>Sign-Out</a></li>
 
-                    <li><a href=""><i class="fa-solid fa-gear"></i>Settings</a></li>
-                </ul>
+                        <li><a href=""><i class="fa-solid fa-gear"></i>Settings</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="right-site-content">
@@ -52,7 +54,7 @@
                     <div class="flex-box">
                         <div class="card">
                             <div class="card-title">
-                               <i class="fa-solid fa-coins"></i>
+                                <i class="fa-solid fa-coins"></i>
                             </div>
                             <div class="card-body">
                                 <p>Today's Earning</p>
@@ -64,7 +66,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title">
-                             <i class="fa-solid fa-sack-dollar"></i>
+                                <i class="fa-solid fa-sack-dollar"></i>
                             </div>
                             <div class="card-body">
                                 <p>Last Week Earning</p>
@@ -76,7 +78,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title">
-                              <i class="fa-solid fa-users"></i>
+                                <i class="fa-solid fa-users"></i>
                             </div>
                             <div class="card-body">
                                 <p>New Clients</p>
@@ -88,7 +90,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title">
-                               <i class="fa-solid fa-money-bill-wave"></i>
+                                <i class="fa-solid fa-money-bill-wave"></i>
                             </div>
                             <div class="card-body">
                                 <p>Sales Revenue</p>
@@ -104,7 +106,46 @@
 
                 <div class="Dashboard-graphs">
                     <div class="flex-box">
-                        
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                    <div class="flex-box mini-chart">
+                        <div class="card graph-card">
+                            <div class="card-title">
+                                <canvas id="Week-Earning"></canvas>
+                            </div>
+                            <div class="card-body">
+                                <h4>Website Views</h4>
+                                <p>Last Campaign Performance</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text12 "><i class="fa-regular fa-clock"></i>Campaign Running since 3days</p>
+                            </div>
+                        </div>
+                        <div class="card graph-card">
+                            <div class="card-title">
+                                <canvas id="New-clients"></canvas>
+                            </div>
+                            <div class="card-body">
+                                <h4>Daily Sales</h4>
+                                <p>(+15%) increase in today sales.t</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text12 "><i class="fa-regular fa-clock"></i>Clents Growth Chart</p>
+                            </div>
+                        </div>
+                        <div class="card graph-card">
+                            <div class="card-title">
+                                <canvas id="Revenue"></canvas>
+                            </div>
+                            <div class="card-body">
+                                <h4>Website Visitor</h4>
+                                <p>Website visitors Performance</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text12 "><i class="fa-regular fa-clock"></i>Website Visitors Tracking</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,7 +163,136 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
         integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/custom.js"></script>
+
+
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [32, 89, 53, 75, 50, 83],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        const views = document.getElementById('New-clients');
+
+        new Chart(views, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [32, 89, 53, 75, 50, 83],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+        const Earning = document.getElementById('Week-Earning');
+
+        new Chart(Earning, {
+            type: 'doughnut',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [32, 89, 53, 75, 50, 83],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+        const visitor = document.getElementById('Revenue');
+
+        new Chart(visitor, {
+            type: 'polarArea',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [32, 89, 53, 75, 50, 83],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+    </script>
 </body>
 
 </html>
