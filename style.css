@@ -1,0 +1,271 @@
+:root {
+    --primaryColor: rgb(0, 133, 194);
+    --sencondColor: green;
+    --thirdColor: rgb(255, 166, 0);
+    --lightAss: rgb(232, 232, 232);
+    --gray: gray;
+    --darkGray: rgb(89, 89, 89);
+
+
+    --borderColor: 1px solid rgb(210, 182, 0);
+    --text46: 46px;
+    --text44: 44px;
+    --text42: 42px;
+    --text38: 38px;
+    --text40: 40px;
+    --text36: 36px;
+    --text34: 34px;
+    --text32: 32px;
+    --text30: 30px;
+    --text28: 28px;
+    --text26: 26px;
+    --text24: 24px;
+    --text22: 22px;
+    --text20: 20px;
+    --text18: 18px;
+    --text15: 15px;
+    --text12: 12px;
+    --transition: .7s;
+    --borderRadius: 15px;
+    --blackRgba: rgba(0, 0, 0, 0.75);
+    --greenRgba: rgba(0, 128, 0, 0.749);
+    --boxshadow: 0px 0px 5px rgb(94, 104, 121);
+    --blackShadow: 0px 0px 5px rgba(0, 0, 0, 0.199);
+    --innerShadow: inset 0px 0px 5px rgb(94, 104, 121);
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+button {
+    background-color: var(--thirdColor);
+    font-weight: 500;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 8px;
+    transition: var(--transition);
+    border-radius: var(--borderRadius);
+    -webkit-border-radius: var(--borderRadius);
+    -moz-border-radius: var(--borderRadius);
+    -ms-border-radius: var(--borderRadius);
+    -o-border-radius: var(--borderRadius);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+}
+
+.container-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width:576px) {
+    .container-box {
+        width: 98%;
+        margin: 0 auto;
+    }
+}
+
+.flexJustify-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.items-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    margin: 30px 0;
+    padding: 25px 0;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+main {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-sitebar .logo {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.left-sitebar .logo a {
+    font-size: 20px;
+    color: var(--gray);
+}
+
+.left-sitebar {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: ;
+    box-shadow: var(--blackShadow);
+    overflow-y: auto;
+}
+
+
+
+.left-sitebar ul {
+    position: relative;
+    top: 5%;
+
+}
+
+.left-sitebar ul li {
+    display: flex;
+    margin: 5px 0;
+    padding: 15px 10px;
+}
+
+.left-sitebar ul li:hover {
+    background-color: rgb(0, 160, 188);
+
+}
+
+.left-sitebar ul li svg {
+    width: 40px;
+    color: var(--primaryColor);
+}
+
+.left-sitebar ul li a {
+    width: 100%;
+    color: black;
+}
+
+.right-site-content {
+    width: 80%;
+    height: 100%;
+}
+
+main .right-site-content .left-site {
+    width: 50%;
+}
+
+.right-site-content .right-site {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+.right-site-content .navbar {
+    padding: 18px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 999999;
+}
+
+
+
+
+
+
+.body-content {
+    margin:70px 20px;
+    padding: 10px;
+
+}
+
+.body-content .short-titleCards .flex-box {
+    justify-content: space-between;
+}
+
+.body-content .card {
+    width: 23.5%;
+    position: relative;
+    padding: 10px;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--blackShadow);
+    -webkit-border-radius: var(--borderRadius);
+    -moz-border-radius: var(--borderRadius);
+    -ms-border-radius: var(--borderRadius);
+    -o-border-radius: var(--borderRadius);
+}
+
+.body-content .card-title {
+    padding: 20px;
+}
+
+.body-content .card-title svg {
+    width: 50px;
+    background-color: var(--greenRgba);
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+    position: absolute;
+    top: -15%;
+    left: 10%;
+    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.154);
+    border-radius: var(--borderRadius);
+    -webkit-border-radius: var(--borderRadius);
+    -moz-border-radius: var(--borderRadius);
+    -ms-border-radius: var(--borderRadius);
+    -o-border-radius: var(--borderRadius);
+}
+
+.body-content .card-body {
+
+    text-align: right;
+    border-bottom: 1px solid var(--lightAss);
+}
+
+.body-content .card-body h3 {
+    font-size: var(--text28);
+    color: var(--primaryColor);
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+.body-content .card-footer {
+    margin: 15px 10px;
+
+}
