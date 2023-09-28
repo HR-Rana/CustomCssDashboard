@@ -180,9 +180,41 @@
             }else{
                 console.log("some data are available....")
             }
-           
 
         };  
+       
 
 
-        function 
+          
+
+
+
+
+        function SingleNotificationDelete(e){
+          
+              const notificatons2 = document.querySelectorAll(".alert-box");
+              for (let i = 0; i < notificatons2.length; i++) {
+                const element = notificatons2[i];
+                element.addEventListener("click", function(){
+                    if (element.length <=0) {
+                        const notificationBox = document.querySelector(".notificaton-box");
+                        notificationBox.style.display="none";
+                        alert("no data")
+                    }
+
+              if (element.length <= 0) {
+                const notificationBox = document.querySelector(".notificaton-box");
+                notificationBox.style.display="none";
+              }
+              else{
+                    element.style.display="none";
+              }
+                })
+                
+              }}
+
+
+
+
+
+// close popup
