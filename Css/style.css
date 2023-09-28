@@ -379,11 +379,32 @@ main .right-site-content .left-site {
 
 /* Table list Page */
 
+.body-content .search-bar{
+    position: relative;
+}
+.body-content .search-bar svg{
+    position: absolute;
+    right: 5px;
+    top:25%;
+
+
+}
 .body-content .data-list-table {
     padding: 25px;
     box-shadow: var(--boxshadow);
 }
-
+.body-content .data-list-table table{
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+.body-content table tr:hover{
+    background-color: var(--lightAss);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
 .body-content .data-list-table h2 {
     margin: 15px 0;
     text-align: center;
@@ -575,4 +596,18 @@ main .right-site-content .left-site {
 }
 .modal-popup .card{
     background-color: white;
+}
+
+
+/* setting page */
+
+.form-handling form{
+    width: 50%;
+    display: flex !important;
+    flex-direction: column;
+}
+.form-handling form input{
+    width: ;
+    margin: 5px 0;
+    padding: 8px;
 }
