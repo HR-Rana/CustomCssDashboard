@@ -41,7 +41,7 @@
         <div class="right-site-content">
             <div class="navbar flexJustify-between">
                 <div class="left-site">
-                    <h2>Dashboard</h2>
+                    <h2>Modals</h2>
                 </div>
                 <div class="right-site">
                     <ul class="flex-box">
@@ -64,8 +64,10 @@
                             </div>
                             <div class="modal-footer">
                                 <div class="buttons">
-                                    <button type="button" style="background-color: red; color: white;">Close</button>
-                                    <button type="button" style="background-color: green; color: white;">Done</button>
+                                    <button type="button" class="close"
+                                        style="background-color: red; color: white;">Close</button>
+                                    <button type="button" class="done"
+                                        style="background-color: green; color: white;">Done</button>
                                 </div>
                             </div>
                         </div>
@@ -91,18 +93,13 @@
 
                         <div class="modals-button-area">
                             <div class="modal-show">
-                                <button id="show">Show Modal</button>
-                                <button>Show</button>
-                                <button>Modal</button>
+                                <button id="Show">Show Modal</button>
                             </div>
                         </div>
                     </div>
-                    <button>hello</button>
-                    <button>hello</button>
-                    <button>hello</button>
 
-                    <div class="modal-popup">
-                        <div class="modal-card card " id="modal-1">
+                    <div class="modal-popup" id="modal-1">
+                        <div class="modal-card card ">
                             <div class="modal-title">
                                 <span><i class="fa-solid fa-circle-check"></i></span>
                             </div>
@@ -142,20 +139,30 @@
 
     <script>
 
-        const close = document.getElementById("closePopup");
+
+        const showButton = document.getElementById("Show");
+        const hideModal = document.getElementById("closePopup");
         const done = document.getElementById("done");
-        const modal = document.getElementById("modal-1");
-        const showBtn = document.getElementById("show")
-        close.addEventListener("click", function () {
-            modal.style.display = "none"
+        const popup = document.getElementById("modal-1");
+
+        showButton.addEventListener("click", function () {
+            popup.style.visibility = "visible"
         })
         done.addEventListener("click", function () {
-            modal.style.display = "none"
+            popup.style.visibility = "hidden";
+            popup.style.transition = ".1s"
+        })
+        hideModal.addEventListener("click", function () {
+            popup.style.visibility = "hidden";
+            popup.style.transition = ".1s"
         })
 
-        .showBtn.addEventListener('click', function(){
-            modal.style.display="none"
-        })
+
+     function close (e){    
+        e.forEach(element => {
+            
+        });
+     }
 
 
     </script>

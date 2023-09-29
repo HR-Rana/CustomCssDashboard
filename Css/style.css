@@ -379,25 +379,29 @@ main .right-site-content .left-site {
 
 /* Table list Page */
 
-.body-content .search-bar{
+.body-content .search-bar {
     position: relative;
 }
-.body-content .search-bar svg{
+
+.body-content .search-bar svg {
     position: absolute;
     right: 5px;
-    top:25%;
+    top: 25%;
 
 
 }
+
 .body-content .data-list-table {
     padding: 25px;
     box-shadow: var(--boxshadow);
 }
-.body-content .data-list-table table{
+
+.body-content .data-list-table table {
     border-collapse: collapse;
     overflow-x: auto;
 }
-.body-content table tr:hover{
+
+.body-content table tr:hover {
     background-color: var(--lightAss);
     transition: .5s;
     -webkit-transition: .5s;
@@ -405,6 +409,7 @@ main .right-site-content .left-site {
     -ms-transition: .5s;
     -o-transition: .5s;
 }
+
 .body-content .data-list-table h2 {
     margin: 15px 0;
     text-align: center;
@@ -432,13 +437,14 @@ main .right-site-content .left-site {
 }
 
 /* notification page */
-.notification-area{
+.notification-area {
     width: 65%;
     margin: 0 auto;
     box-shadow: var(--boxshadow);
     padding: 25px 20px;
 
 }
+
 .body-content .alert-box {
     box-shadow: var(--boxshadow);
     padding: 10px;
@@ -455,6 +461,7 @@ main .right-site-content .left-site {
     display: flex;
     justify-content: center;
 }
+
 .body-content .alert-box p {
     width: 95%;
     display: flex;
@@ -485,48 +492,55 @@ main .right-site-content .left-site {
     -o-transform: scale(1.1);
 }
 
-.body-content .delete-notification{
+.body-content .delete-notification {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.body-content .delete-notification h6{
-   font-size: 16px;
-   cursor: pointer;
-   padding: 5px 10px;
-   transition: .4s;
-   -webkit-transition: .4s;
-   -moz-transition: .4s;
-   -ms-transition: .4s;
-   -o-transition: .4s;
+
+.body-content .delete-notification h6 {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
 }
-.body-content .delete-notification h6:hover{
-   box-shadow: var(--boxshadow);
-   
+
+.body-content .delete-notification h6:hover {
+    box-shadow: var(--boxshadow);
+
 }
-.body-content .delete-notification h6 svg{
-   color: red;
+
+.body-content .delete-notification h6 svg {
+    color: red;
 }
 
 
 
 /* modals page */
 
-.body-content .modals{
-    width:100%;
+.body-content .modals {
+    width: 100%;
 }
-.body-content .modals .flex-box{
+
+.body-content .modals .flex-box {
     width: 100%;
     justify-content: space-between;
 }
-.body-content .modals .card{
+
+.body-content .modals .card {
     width: 48%;
     position: relative;
 }
-.modal-title{
+
+.modal-title {
     padding: 15px 0;
 }
-.modals .modal-title span{
+
+.modals .modal-title span {
     width: 60px;
     height: 60px;
     display: flex;
@@ -544,26 +558,30 @@ main .right-site-content .left-site {
     -ms-border-radius: var(--borderRadius);
     -o-border-radius: var(--borderRadius);
 }
-.modals .modal-body{
-     margin: 10px 0;
-}
-.modal-body p{
-    margin:15px 0;
+
+.modals .modal-body {
+    margin: 10px 0;
 }
 
-.modal-footer{
+.modal-body p {
+    margin: 15px 0;
+}
+
+.modal-footer {
     border-top: .5px solid gainsboro;
     padding: 15px 0;
     display: flex;
     justify-content: end;
 }
-.modal-footer .buttons{
+
+.modal-footer .buttons {
     width: 50%;
     display: flex;
     justify-content: end;
     justify-content: space-between;
 }
-.modal-footer button{
+
+.modal-footer button {
     width: 45%;
     cursor: pointer;
     padding: 10px;
@@ -573,16 +591,18 @@ main .right-site-content .left-site {
     width: 100%;
     height: 40px;
 }
-.modals-button-area .modal-show{
+
+.modals-button-area .modal-show {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.modals-button-area button{
+
+.modals-button-area button {
     width: 30%;
 }
 
-.modal-popup{
+.modal-popup {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -592,22 +612,38 @@ main .right-site-content .left-site {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
-}
-.modal-popup .card{
-    background-color: white;
+    visibility: hidden;
 }
 
+.modal-popup .card {
+    background-color: white;
+    margin:  auto auto;
+}
+
+.hide {
+    display: none;
+}
 
 /* setting page */
 
-.form-handling form{
+.form-handling form {
     width: 50%;
     display: flex !important;
     flex-direction: column;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: var(--boxshadow);
 }
-.form-handling form input{
-    width: ;
+
+.form-handling form input {
     margin: 5px 0;
     padding: 8px;
+}
+
+input[type="button"] {
+ background-color: var(--primaryColor);
+ outline: none;
+ border: none;
+ color: white;
+ padding: 5px;
 }
